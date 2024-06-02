@@ -82,7 +82,7 @@ const Leftsidebar = () => {
                     <>
                         <div className="card flex flex-col justify-between w-full h-28 p-4 mt-2 rounded-xl bg-[#FFFFFF] drop-shadow-md" key={index}>
                             <div className='flex justify-between items-center'>
-                                <img className='w-9 h-9' src={data.svg} alt="" />
+                                <img className='w-9 h-9' src={data.svg} alt="images" />
                                 {/* <div className='flex justify-between px-3 items-start border border-red-900 w-full'> */}
                                 <h3 className='text-sm text-[#0F1231] font-semibold'>{data.name}</h3>
                                 <svg className='' width="13" height="12" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
