@@ -7,17 +7,7 @@ import bitcoin3 from '../Images/Coin Icon (2).svg'
 import insurance from '../Images/icons.svg'
 import electricity from '../Images/electricity icon.svg'
 
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/css';
-// import 'swiper/css/free-mode';
-// import 'swiper/css/pagination';
-
-
-// import required modules
-// import { FreeMode, Pagination } from 'swiper/modules';
 const Main = () => {
-
-
 
   const midCardData = [
     {
@@ -76,21 +66,10 @@ const Main = () => {
         <h2 className='font-sans text-3xl leading-10 font-bold text-[#393939]'>Hi Daniel</h2>
         <div className='flex justify-between my-6'>
 
-          {/* <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
-            freeMode={true}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[FreeMode, Pagination]}
-            className="mySwiper"
-          > */}
-
             {midCardData.map((cardData, index) => {
               return (
                 <>
-                  <div className='flex flex-col p-4 gap-4 lg:w-28 lg:h-56 xl:w-44 xl:h-64 rounded-xl' style={{ backgroundColor: cardData.color }}>
+                  <div className='flex flex-col p-4 gap-4 lg:w-36 lg:h-56 xl:w-52 xl:h-72 rounded-xl' style={{ backgroundColor: cardData.color }}>
                     <div className='flex justify-between w-full'>
                       <h3 className='text-sm font-semibold font-[Berlin Sans FB] leading-5'>{cardData.name}</h3>
                       <svg width="5" height="18" viewBox="0 0 5 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,7 +87,6 @@ const Main = () => {
                 </>
               )
             })}
-          {/* </Swiper> */}
         </div>
 
       </div>
@@ -116,7 +94,7 @@ const Main = () => {
 
       {/* Activities Start  */}
 
-      <div className='py-2'>
+      <div className=''>
         <div className='flex w-full justify-between items-center'>
           <h2 className='font-sans text-2xl leading-10 font-bold text-[#000000]'>Latest Activity</h2>
           <div className='flex gap-4'>
@@ -142,19 +120,19 @@ const Main = () => {
 
                     <div>
                       <h4 className='text-[#000] font-[Berlin Sans FB Demi] font-bold leading-5 text-base'>{activity.name}</h4>
-                      <p className='text-[#6F767E] font-[Berlin Sans FB Demi] font-bold leading-5 text-sm'>{activity.subname}</p>
+                      <p className='text-[#6F767E] font-[Berlin Sans FB Demi] font-bold leading-5 lg:text-[10px] xl:text-sm'>{activity.subname}</p>
                     </div>
                     <div >
                       <h4 className='text-[#000] font-[Berlin Sans FB Demi] font-bold leading-5 text-base'>{activity.wallet}</h4>
-                      <p className='text-[#6F767E] font-[Berlin Sans FB Demi] font-bold leading-5 text-sm'>Personal account</p>
+                      <p className='text-[#6F767E] font-[Berlin Sans FB Demi] font-bold leading-5 lg:text-[10px] xl:text-sm'>Personal account</p>
                     </div>
                     <div >
                       <h4 className='text-[#000] font-[Berlin Sans FB Demi] font-bold leading-5 text-base'>{activity.date}</h4>
-                      <p className='text-[#6F767E] font-[Berlin Sans FB Demi] font-bold leading-5 text-sm'>Last payment</p>
+                      <p className='text-[#6F767E] font-[Berlin Sans FB Demi] font-bold leading-5 lg:text-[10px] xl:text-sm'>Last payment</p>
                     </div>
                     <div >
                       <h4 className='text-[#000] font-[Berlin Sans FB Demi] font-bold leading-5 text-base'>{activity.balance}</h4>
-                      <p className='text-[#6F767E] font-[Berlin Sans FB Demi] font-bold leading-5 text-sm'>Balance</p>
+                      <p className='text-[#6F767E] font-[Berlin Sans FB Demi] font-bold leading-5 lg:text-[10px] xl:text-sm'>Balance</p>
                     </div>
 
 

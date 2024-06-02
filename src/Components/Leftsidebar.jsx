@@ -70,7 +70,7 @@ const Leftsidebar = () => {
         },
     ]
     return (
-        <aside className='h-auto py-2 px-10 bg-[#F9FAFF]'>
+        <aside className='h-auto py-2 lg:px-5 xl:px-10 bg-[#F9FAFF]'>
             <div className='flex justify-between'>
                 <h2 className='text-3xl font-bold font-sans pb-3'>Payments</h2>
                 <button className='bg-[#FFFFFF] py-2 px-4 rounded-md'>Clear</button>
@@ -82,14 +82,14 @@ const Leftsidebar = () => {
                     <>
                         <div className="card flex flex-col justify-between w-full h-28 p-4 mt-2 rounded-xl bg-[#FFFFFF] drop-shadow-md" key={index}>
                             <div className='flex justify-between items-center'>
-                                <img className='w-9 h-9' src={data.svg} alt="images" />
+                                <img className='lg:w-6 lg:h-6 xl:w-9 xl:h-9' src={data.svg} alt="images" />
                                 {/* <div className='flex justify-between px-3 items-start border border-red-900 w-full'> */}
-                                <h3 className='text-sm text-[#0F1231] font-semibold'>{data.name}</h3>
+                                <h3 className='lg:text-xs xl:text-sm text-[#0F1231] font-semibold'>{data.name}</h3>
                                 <svg className='' width="13" height="12" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6.13142 6.99021C5.91165 6.99021 5.6919 6.90629 5.52434 6.73881L0.251563 1.46598C-0.0838544 1.13056 -0.0838544 0.586743 0.251563 0.251461C0.586845 -0.0838204 1.13056 -0.0838204 1.466 0.251461L6.13142 4.91715L10.7969 0.251624C11.1323 -0.0836575 11.6759 -0.0836575 12.0112 0.251624C12.3468 0.586906 12.3468 1.13073 12.0112 1.46614L6.73851 6.73898C6.57087 6.90648 6.35112 6.99021 6.13142 6.99021Z" fill="#AFBCCD" />
                                 </svg>
                                 {/* </div> */}
-                                <span className='bg-[#F9FAFF] text-sm font-sans font-normal drop-shadow-md rounded-md p-2'>{data.price}</span>
+                                <span className='bg-[#F9FAFF] lg:text-xs xl:text-sm font-sans font-normal drop-shadow-md rounded-md p-2'>{data.price}</span>
                             </div>
 
                             <div className='flex justify-between items-end'>
@@ -120,7 +120,7 @@ const Leftsidebar = () => {
                 <div class="absolute top-4 left-16 w-32 h-32 bg-blue-500 z-20">Div 2</div>
             </div> */}
 
-            <div className='flex items-center gap-20 p-2 my-6 bg-[#D7D6EC] hover:bg-[#e4e6e9] w-full rounded-lg  hover:cursor-pointer'>
+            <div className='flex items-center lg:gap-10 xl:gap-20 p-2 my-6 bg-[#D7D6EC] hover:bg-[#e4e6e9] w-full rounded-lg  hover:cursor-pointer'>
                 <img className='p-2 bg-[#FFFFFF] w-7 h-7 rounded-lg' src={pen}></img>
                 <p className='font-[Berlin Sans FB] flex gap-2  text-[#51459E] font-semibold text-xs leading-3'>
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">

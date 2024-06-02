@@ -18,7 +18,7 @@
 @media screen and (max-width:1400px) and (min-width:767px) {
     .main {
         display: grid;
-        grid-template-columns: 1fr 2.5fr 1fr;
+        grid-template-columns: 0.7fr 2.5fr 1.3fr;
         grid-template-rows: 1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
