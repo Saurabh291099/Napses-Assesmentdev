@@ -49,7 +49,7 @@ const Main = () => {
     }
   ]
   return (
-    <main className='h-auto py-2 lg:px-8 xl:px-14'>
+    <main className='h-auto py-3 lg:px-8 xl:px-14'>
 
       {/* search bar  */}
 

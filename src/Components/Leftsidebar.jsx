@@ -70,7 +70,7 @@ const Leftsidebar = () => {
         },
     ]
     return (
-        <aside className='h-auto py-2 lg:px-5 xl:px-10 bg-[#F9FAFF]'>
+        <aside className='h-auto py-3 lg:px-5 xl:px-10 bg-[#F9FAFF]'>
             <div className='flex justify-between'>
                 <h2 className='text-3xl font-bold font-sans pb-3'>Payments</h2>
                 <button className='bg-[#FFFFFF] py-2 px-4 rounded-md'>Clear</button>
