@@ -59,7 +59,7 @@ const Sidebar = () => {
     ]
     return (
         <aside className='flex flex-col items-center gap-4 h-auto py-3 px-2 bg-[#F9FAFF]'>
-            <h2 className='text-3xl text-center font-bold font-sans lg:tracking-normal xl:tracking-widest '>NAPSES</h2>
+            <h2 className='text-3xl text-center font-bold font-sans lg:tracking-normal xl:tracking-normal '>Dashboard</h2>
             <div className='flex flex-wrap justify-center'>
 
                 {sidebarItem.map((data, index) => {
