@@ -1,9 +1,10 @@
-import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { React, useState } from 'react'
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
+// import 'swiper/swiper-bundle.min.css';
+// import 'swiper/modules/navigation/navigation.min.css';
+// import 'swiper/modules/pagination/pagination.min.css';
 
 
 import mac1 from '../Images/mac1.png'
@@ -14,9 +15,9 @@ import mac5 from '../Images/mac5.png'
 import mac6 from '../Images/mac6.png'
 
 
-import { Navigation, Pagination } from 'swiper/modules';
 const Test = () => {
 
+    const [isHovered, setIsHovered] = useState(false);
 
 
     const carouselImage = [
@@ -45,31 +46,85 @@ const Test = () => {
                                 <button className='py-2 px-6 text-[14px]  rounded-3xl'>15'' (M3)</button>
                             </div>
 
-                            <div className='py-4'>
+                            <div className='py-4 h-auto'>
 
-                                <Swiper
-                                    spaceBetween={50}
-                                    slidesPerView={1}
-                                    onSlideChange={() => console.log('slide change')}
-                                    onSwiper={(swiper) => console.log(swiper)}
+                                <div className="flex flex-col gap-3 relative px-5">
+                                    <div className="relative" onMouseEnter={() => setIsHovered(true)}
+                                        onMouseLeave={() => setIsHovered(false)}>
+                                        <Swiper className=''
+                                            spaceBetween={50}
+                                            slidesPerView={1}
+                                            onSlideChange={() => console.log('slide change')}
+                                            onSwiper={(swiper) => console.log(swiper)}
+                                            pagination={{
+                                                el: '.swiper-pagination',
+                                                clickable: true,
+                                                // dynamicBullets: true, // Add dynamic bullets
+                                            }}
+                                            navigation={{
+                                                nextEl: '.swiper-button-next',
+                                                prevEl: '.swiper-button-prev',
+                                            }}
+                                            modules={[Pagination, Navigation]}
+                                        >
+                                            {carouselImage.map((data, index) => (
+                                                <SwiperSlide key={index}>
+                                                    <img
+                                                        className='w-full h-full object-cover'
+                                                        src={data.img}
+                                                        alt={`carousel ${index + 1}`}
+                                                    />
+                                                </SwiperSlide>
+                                            ))}
+                                        </Swiper>
 
-                                    pagination={{
-                                        clickable: true,
-                                    }}
-                                    navigation={true}
-                                    modules={[Pagination, Navigation]}
-                                >
-                                    {carouselImage.map((data, index) => (
-                                        <SwiperSlide key={index}>
-                                            <img className='w-full h-full object-cover' src={data.img} alt={`carousel ${index + 1}`} />
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
+                                        {/* <div className="swiper-button-next bg-black opacity-70"></div>
+                                        <div className="swiper-button-prev bg-black opacity-70"></div> */}
+
+                                        <div
+                                            className={`swiper-button-next transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'
+                                                }`}
+                                        ></div>
+                                        <div
+                                            className={`swiper-button-prev transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'
+                                                }`}
+                                        ></div>
+
+                                    </div>
+
+
+                                    <div className="swiper-pagination z-30 pt-2 text-[#333333]"></div>
+
+                                </div>
+
+
+
+
+                                {/* <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper" modules={[Navigation]}
+                                        navigation={{
+                                            nextEl: '.swiper-button-next',
+                                            prevEl: '.swiper-button-prev',
+                                        }}>
+
+
+                                        {carouselImage.map((data, index) => (
+
+                                            <div class="swiper-slide" key={index}>
+                                                <img className='w-full h-full object-cover' src={data.img} alt={`carousel ${index + 1}`} />
+
+                                            </div>
+
+                                        ))}
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div> */}
 
 
                             </div>
-                            <div className='my-4 py-4 flex items-center justify-center flex-col gap-3'>
-                                <p className='text-xs text-[#6e6e73]'>Available in 4 colours</p>
+                            <div className='my-10 py-4 flex items-center justify-center flex-col gap-3'>
+                                <p className='text-sm text-[#6e6e73]'>Available in 4 colours</p>
                                 <div className='flex gap-2'>
                                     <div className='w-3 h-3 rounded-full bg-[#7D7E80]'></div>
                                     <div className='w-3 h-3 rounded-full bg-[#333333]'></div>
@@ -89,7 +144,7 @@ const Test = () => {
 
                                 <div>
 
-                                    <button className='bg-[#0071e3] hover:bg-[#3900e3] text-white py-2 px-4 rounded-2xl text-sm'>Buy</button>
+                                    <button className='bg-[#0071e3] hover:bg-[#3900e3] text-white py-[8px] px-[15px] rounded-2xl text-sm'>Buy</button>
 
                                 </div>
                             </div>
